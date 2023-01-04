@@ -18,9 +18,6 @@ const BottomNavigation = () => {
               height: 40,
               alignItems: 'center',
               marginTop:5
-
-              6
-              3
               // textAlign:'center',
               // justifyContent:'center',
               // marginBottom:20

@@ -42,14 +42,11 @@ const Quiz = ({navigation}) => {
   //   };
   // }, [index]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      CountDown;
-    },30000)
-  })
+
   useEffect(() => {
     const interval = setTimeout(() => {
       Timer();
+      CountDown();
       console.log('Calling');
     }, 30000);
     return () => {
