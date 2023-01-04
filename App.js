@@ -22,11 +22,11 @@ const App = () => {
       {/* <ConfettiView/> */}
       {/* <ConfettieCanon/> */}
       {/* <WeeklyData/> */}
-      {/* <NavigationContainer>
+      <NavigationContainer>
       <MyStack />
-    </NavigationContainer> */}
+    </NavigationContainer>
     {/* <Quiz/> ` */}
-    <LeaderBoard/>
+    {/* <LeaderBoard/> */}
     </>
   );
 };

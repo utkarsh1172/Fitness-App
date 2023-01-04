@@ -17,8 +17,16 @@ const BottomNavigation = () => {
               width: 40,
               height: 40,
               alignItems: 'center',
+              marginTop:5
+
+              6
+              3
+              // textAlign:'center',
+              // justifyContent:'center',
+              // marginBottom:20
+              
             }}>
-            <Text style={{fontSize: 34, color: 'white'}}>+</Text>
+            <Text style={{fontSize: 30,fontWeight:'500', color: 'white',position:'relative'}}>+</Text>
           </View>
           <Icon1 name="graph" size={25} color="gray" />
           <Icon name="bell" size={25} color="gray" />

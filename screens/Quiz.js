@@ -42,15 +42,20 @@ const Quiz = ({navigation}) => {
   //   };
   // }, [index]);
 
-  // useEffect(() => {
-  //   const interval = setTimeout(() => {
-  //     Timer();
-  //     console.log('Calling');
-  //   }, 1000);
-  //   return () => {
-  //     clearTimeout(interval);
-  //   };
-  // }, [options, ques, questionNumber]);
+  useEffect(() => {
+    setTimeout(() => {
+      CountDown;
+    },30000)
+  })
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      Timer();
+      console.log('Calling');
+    }, 30000);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, [options, ques, questionNumber]);
 
   const getQuiz = async () => {
     setIsloading(true);
@@ -130,6 +135,24 @@ const Quiz = ({navigation}) => {
       // setScore(score - 10),
     ]);
 
+
+     const CountDown = () => {
+      return(
+        <CircularProgress
+        value={0}
+        radius={60}
+        maxValue={30}
+        initialValue={30}
+        progressValueColor={'gold'}
+        activeStrokeColor={'gold'}
+        activeStrokeWidth={15}
+        inActiveStrokeWidth={15}
+        duration={30000}
+        // onAnimationComplete={handleNextPress}
+        style={{margin:10}}
+      />
+      )
+     }
   return (
     <View style={styles.container}>
       {isLoading ? (
@@ -172,7 +195,7 @@ const Quiz = ({navigation}) => {
             </View>
           
             <View style={styles.bottom}>
-             <CircularProgress
+             {/* <CircularProgress
               value={0}
               radius={60}
               maxValue={30}
@@ -184,7 +207,8 @@ const Quiz = ({navigation}) => {
               duration={30000}
               // onAnimationComplete={handleNextPress}
               style={{margin:10}}
-            />
+            /> */}
+            <CountDown/>
               {ques !== 9 && (
                 <View style={styles.button}>
                   <TouchableOpacity onPress={handleNextPress}>
